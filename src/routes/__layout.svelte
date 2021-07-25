@@ -1,10 +1,10 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { navigating } from '$app/stores';
-	import Nav from '$lib/layout/Nav.svelte';
+	import Nav from '$lib/components/layout/Nav.svelte';
 </script>
 
-<div class="container mx-auto px-4">
+<div class="container mx-auto p-4">
 	<Nav />
 
 	{#if $navigating}

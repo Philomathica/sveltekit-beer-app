@@ -43,14 +43,9 @@ export interface Malt {
 	amount: Amount;
 }
 
-export interface Amount2 {
-	value: number;
-	unit: string;
-}
-
 export interface Hop {
 	name: string;
-	amount: Amount2;
+	amount: Amount;
 	add: string;
 	attribute: string;
 }

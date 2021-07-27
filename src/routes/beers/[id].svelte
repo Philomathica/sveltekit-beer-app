@@ -18,11 +18,8 @@
 
 <script lang="ts">
   import BeerDetails from '$lib/components/beers/BeerDetails.svelte';
-  import { path } from '$lib/stores/layout/layout-store';
 
   export let beer: Beer;
-
-  path.set('beers');
 </script>
 
 <svelte:head>

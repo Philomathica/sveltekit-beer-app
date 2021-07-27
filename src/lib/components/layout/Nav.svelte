@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { path } from '$lib/stores/layout/layout-store';
+  export let section: string;
 </script>
 
 <nav class="p-4">
   <ul class="flex gap-2">
-    <li><a sveltekit:prefetch href="/" class:active={$path === 'home'}>Home</a></li>
-    <li><a sveltekit:prefetch href="/beers" class:active={$path === 'beers'}>Beers</a></li>
+    <li><a sveltekit:prefetch href="/" class:active={section === 'home'}>Home</a></li>
+    <li><a sveltekit:prefetch href="/beers" class:active={section === 'beers'}>Beers</a></li>
   </ul>
 </nav>
 

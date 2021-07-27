@@ -1,11 +1,13 @@
 <script lang="ts">
   import '../app.postcss';
-  import { navigating } from '$app/stores';
+  import { navigating, page } from '$app/stores';
   import Nav from '$lib/components/layout/Nav.svelte';
+
+  $: section = $page.path.split('/')[1];
 </script>
 
 <div class="container mx-auto p-4">
-  <Nav />
+  <Nav {section} />
 
   <div class={$navigating ? 'opacity-1' : 'opacity-0'}>Loading...</div>
 

@@ -7,14 +7,16 @@
   $: section = $page.path.split('/')[1];
 </script>
 
-<div class="container mx-auto p-4">
-  {#if $navigating}
-    <PreloadingIndicator />
-  {/if}
+<div>
+  <div class="container mx-auto p-4">
+    {#if $navigating}
+      <PreloadingIndicator />
+    {/if}
 
-  <Nav {section} />
+    <Nav {section} />
 
-  <main class="mt-12">
-    <slot />
-  </main>
+    <main>
+      <slot />
+    </main>
+  </div>
 </div>

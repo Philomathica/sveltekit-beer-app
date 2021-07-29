@@ -1,10 +1,11 @@
 <script lang="ts">
   import type { Beer } from '$lib/interfaces/beer';
+  import { fade } from 'svelte/transition';
 
   export let beer: Beer;
 </script>
 
-<div class="p-4 rounded-md shadow-md bg-gray-100">
+<div class="p-8 rounded-sm shadow bg-white" in:fade={{ duration: 500 }}>
   <a href="/beers/{beer.id}" class="underline">
     <h4 class="font-bold">{beer.name}</h4>
   </a>

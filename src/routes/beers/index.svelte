@@ -37,23 +37,28 @@
 </script>
 
 <svelte:head>
-  <title>Beer Overview</title>
+  <title>Beer App - Overview</title>
 </svelte:head>
 
-<h1 class="text-6xl">Beer Overview</h1>
+<header class="bg-white shadow py-6 px-8">
+  <h1 class="text-3xl font-bold text-gray-900">Beer Overview</h1>
+</header>
 
-<label for="pageSize">Pagesize:</label>
-<select name="pageSize" bind:value={pageSize} on:change={search}>
-  {#each pageSizes as pageSize}
-    <option value={pageSize}>{pageSize}</option>
-  {/each}
-</select>
-<label for="pageNumber">Pagenumber:</label>
-<select name="pageNumber" bind:value={pageNumber} on:change={search}>
-  {#each pageNumbers as pageNumber}
-    <option value={pageNumber}>{pageNumber}</option>
-  {/each}
-</select>
+<div class="bg-white shadow mt-4 py-6 px-8">
+  <label for="pageSize">Pagesize:</label>
+  <select name="pageSize" bind:value={pageSize} on:change={search}>
+    {#each pageSizes as pageSize}
+      <option value={pageSize}>{pageSize}</option>
+    {/each}
+  </select>
+
+  <label for="pageNumber">Pagenumber:</label>
+  <select name="pageNumber" bind:value={pageNumber} on:change={search}>
+    {#each pageNumbers as pageNumber}
+      <option value={pageNumber}>{pageNumber}</option>
+    {/each}
+  </select>
+</div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
   {#each beers as beer (beer.id)}

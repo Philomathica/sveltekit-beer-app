@@ -15,7 +15,7 @@
 
 {#if visible}
   <div class="absolute top-0 left-0 w-full h-1 z-50">
-    <div class="progress absolute top-0 left-0 h-full bg-red-500" style="width: {p * 100}%" />
+    <div class="progress absolute top-0 left-0 h-full bg-blue-500" style="width: {p * 100}%" />
   </div>
 {/if}
 

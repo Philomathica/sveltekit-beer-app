@@ -23,7 +23,7 @@
 </script>
 
 <svelte:head>
-  <title>Beer Details</title>
+  <title>Beer App - Details</title>
 </svelte:head>
 
 <h1 class="text-6xl">Beer Details</h1>
